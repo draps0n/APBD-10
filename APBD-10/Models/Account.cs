@@ -16,23 +16,23 @@ public class Account
 
     public Role Role { get; set; }
     
-    [Column("first_name")]
+    [Column("first_name", TypeName = "varchar(50)")]
     [Required]
     [MaxLength(50)]
     public string FirstName { get; set; }
     
-    [Column("last_name")]
+    [Column("last_name", TypeName = "varchar(50)")]
     [Required]
     [MaxLength(50)]
     public string LastName { get; set; }
     
-    [Column("email")]
+    [Column("email", TypeName = "varchar(80)")]
     [EmailAddress]
     [Required]
     [MaxLength(80)]
     public string Email { get; set; }
     
-    [Column("phone")]
+    [Column("phone", TypeName = "varchar(9)")]
     [Phone]
     [MaxLength(9)]
     public string? Phone { get; set; }

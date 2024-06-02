@@ -12,24 +12,24 @@ public class Product
 
     [Required]
     [MaxLength(100)]
-    [Column("name")]
+    [Column("name", TypeName = "varchar(100)")]
     public string ProductName { get; set; }
 
     [Required]
     [Column("weight", TypeName = "decimal(5,2)")]
-    public double ProductWeight { get; set; }
+    public decimal ProductWeight { get; set; }
 
     [Required]
     [Column("width", TypeName = "decimal(5,2)")]
-    public double ProductWidth { get; set; }
+    public decimal ProductWidth { get; set; }
     
     [Required]
     [Column("height", TypeName = "decimal(5,2)")]
-    public double ProductHeight { get; set; }
+    public decimal ProductHeight { get; set; }
     
     [Required]
     [Column("depth", TypeName = "decimal(5,2)")]
-    public double ProductDepth { get; set; }
+    public decimal ProductDepth { get; set; }
     
     public IEnumerable<ShoppingCart> ShoppingCarts { get; set; }
     

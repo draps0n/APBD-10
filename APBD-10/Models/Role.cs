@@ -10,7 +10,7 @@ public class Role
     [Column("PK_role")]
     public int RoleId { get; set; }
     
-    [Column("name")]
+    [Column("name", TypeName = "varchar(100)")]
     [Required]
     [MaxLength(100)]
     public string RoleName { get; set; }

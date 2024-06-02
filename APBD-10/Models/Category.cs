@@ -10,7 +10,7 @@ public class Category
     [Column("PK_category")]
     public int CategoryId { get; set; }
     
-    [Column("name")]
+    [Column("name", TypeName = "varchar(100)")]
     [Required]
     [MaxLength(100)]
     public string CategoryName { get; set; }
